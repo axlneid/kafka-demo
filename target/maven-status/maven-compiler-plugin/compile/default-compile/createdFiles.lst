@@ -1,0 +1,17 @@
+com/axl/demo/kafka/serialization/CustomSerializer.class
+com/axl/demo/kafka/config/KafkaProducerConfiguration.class
+com/axl/demo/kafka/model/GreetEvent.class
+com/axl/demo/kafka/config/Constants.class
+com/axl/demo/kafka/model/AbuseEvent$AbuseEventBuilder.class
+com/axl/demo/kafka/model/LikeEvent$LikeEventBuilder.class
+com/axl/demo/kafka/web/controller/UserActionController.class
+com/axl/demo/kafka/config/KafkaTopicConfiguration.class
+com/axl/demo/kafka/config/KafkaConfigProperties.class
+com/axl/demo/kafka/config/Constants$Topics.class
+com/axl/demo/kafka/model/AbuseEvent.class
+com/axl/demo/kafka/KafkaProducerApp.class
+com/axl/demo/kafka/serialization/CustomDeserializer.class
+com/axl/demo/kafka/web/rest/UserActionRestController.class
+com/axl/demo/kafka/model/LikeEvent.class
+com/axl/demo/kafka/service/UserActionService.class
+com/axl/demo/kafka/model/GreetEvent$GreetEventBuilder.class

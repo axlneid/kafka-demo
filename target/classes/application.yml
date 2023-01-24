@@ -1,0 +1,8 @@
+com:
+  axl:
+    demo:
+      kafka:
+        config:
+          like-topic-partitions: 3
+          greet-topic-partitions: 2
+          abuse-topic-partitions: 2

@@ -13,13 +13,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@ConfigurationProperties(prefix = "com.eon.smexnet.kafka.config")
+@ConfigurationProperties(prefix = "com.axl.demo.kafka.config")
 public class KafkaConfigProperties {
 
-    private String bootstrapAddress;
-    private String saslJaasConfig;
-    private boolean saslJaasConfigEnabled = true;
+    private String bootstrapAddress = "localhost:9092";
     private boolean batchEnabled = false;
+
+    private int likeTopicPartitions = 2;
+    private int greetTopicPartitions = 2;
+    private int abuseTopicPartitions = 2;
 
     private int maxPollRecords = 50;
     private int receiveBufferBytes = 10000000;
@@ -33,7 +35,7 @@ public class KafkaConfigProperties {
 
         Map<String, Object> producerProps = new HashMap<>();
 
-        producerProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        producerProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         producerProps.put(ProducerConfig.MAX_REQUEST_SIZE_CONFIG, maxProducerRequestSize);
         producerProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         producerProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, CustomSerializer.class);

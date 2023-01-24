@@ -19,14 +19,14 @@ public class UserActionService {
     private final KafkaTemplate<String, AbuseEvent> abuseEventKafkaTemplate;
 
     public void sendLikeEvent(LikeEvent likeEvent) {
-        likeEventKafkaTemplate.send(LIKE_EVENT_TOPIC, likeEvent);
+        likeEventKafkaTemplate.send(LIKE_TOPIC, likeEvent);
     }
 
     public void sendGreetEvent(GreetEvent greetEvent) {
-        greetEventKafkaTemplate.send(GREET_EVENT_TOPIC, greetEvent);
+        greetEventKafkaTemplate.send(GREET_TOPIC, greetEvent);
     }
 
     public void sendAbuseEvent(AbuseEvent abuseEvent) {
-        abuseEventKafkaTemplate.send(ABUSE_EVENT_TOPIC, abuseEvent);
+        abuseEventKafkaTemplate.send(ABUSE_TOPIC, abuseEvent);
     }
 }
