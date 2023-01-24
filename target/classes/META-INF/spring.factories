@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.axl.demo.kafka.config.KafkaProducerConfiguration, \
-com.axl.demo.kafka.config.KafkaTopicConfiguration \
