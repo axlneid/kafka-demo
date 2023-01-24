@@ -1,6 +1,7 @@
 package com.axl.demo.kafka.config;
 
 
+import com.axl.demo.kafka.model.AbuseEvent;
 import com.axl.demo.kafka.model.GreetEvent;
 import com.axl.demo.kafka.model.LikeEvent;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +36,16 @@ public class KafkaProducerConfiguration {
 
     @Bean
     public ProducerFactory<String, GreetEvent> greetEventProducerFactory() {
+        return new DefaultKafkaProducerFactory<>(kafkaConfigProperties.getProducerProps());
+    }
+
+    @Bean
+    public KafkaTemplate<String, AbuseEvent> abuseEventKafkaTemplate() {
+        return new KafkaTemplate<>(abuseEventProducerFactory());
+    }
+
+    @Bean
+    public ProducerFactory<String, AbuseEvent> abuseEventProducerFactory() {
         return new DefaultKafkaProducerFactory<>(kafkaConfigProperties.getProducerProps());
     }
 }

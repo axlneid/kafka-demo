@@ -2,20 +2,62 @@
 <html>
 <head>
     <title>Kafka-Demo</title>
-    <!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
 <body>
 
-<h1>Like Actions</h1>
-<button type="button" th:onclick="|window.location.href='/user-action/like/Reissdorf'|">Like: Reissdorf</button>
-<button type="button" th:onclick="|window.location.href='/user-action/like/Früh'|">Like: Früh</button>
-<button type="button" th:onclick="|window.location.href='/user-action/like/Becks'|">Like: Becks</button>
+<div>
+    <h1>Actions</h1>
 
-<h1>Greet Actions</h1>
-<button type="button" th:onclick="|window.location.href='/user-action/greet/Kay'|">Greet: Kay</button>
-<button type="button" th:onclick="|window.location.href='/user-action/greet/Sepp'|">Greet: Sepp</button>
-<button type="button" th:onclick="|window.location.href='/user-action/greet/Ernie'|">Greet: Ernie</button>
+    <div>
+        <h2>Like</h2>
+        <p>Topic: like-topic</p>
+        <p>Partitions: 2</p>
+        <form action="#" th:action="@{'/user-action/like/Reissdorf'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Reissdorf</button>
+        </form>
+        <form action="#" th:action="@{'/user-action/like/Früh'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Früh</button>
+        </form>
+        <form action="#" th:action="@{'/user-action/like/Becks'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Becks</button>
+        </form>
+    </div>
 
+    <div>
+        <h2>Greet</h2>
+        <p>Topic: greeting-topic</p>
+        <p>Partitions: 2</p>
+        <form action="#" th:action="@{'/user-action/greet/Oma'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Oma</button>
+        </form>
+        <form action="#" th:action="@{'/user-action/greet/Opa'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Opa</button>
+        </form>
+    </div>
 
+    <div>
+        <h2>Abuse</h2>
+        <p>Topic: abuse-topic</p>
+        <p>Partitions: 2</p>
+        <form action="#" th:action="@{'/user-action/abuse/Trump'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Trump</button>
+        </form>
+        <form action="#" th:action="@{'/user-action/abuse/Putin'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Sepp</button>
+        </form>
+        <form action="#" th:action="@{'/user-action/abuse/Raisi'}" th:method="get">
+            <input type="hidden" name="_method" value="get"/>
+            <button type="submit">Raisi</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

@@ -2,6 +2,12 @@ h1, h2 {
     color:#ff4f57;
 }
 
+h1 {
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 a {
     color: #ff4f57;
 }
@@ -17,4 +23,13 @@ table th, table td {
 .error {
     color: red;
     font-style: italic;
+}
+
+button {
+    width: 200px;
+}
+
+div {
+    display: inline-block;
+    margin-right: 50px;
 }
