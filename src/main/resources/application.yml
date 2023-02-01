@@ -3,6 +3,6 @@ com:
     demo:
       kafka:
         config:
-          like-topic-partitions: 3
-          greet-topic-partitions: 2
-          abuse-topic-partitions: 2
+          like-topic-partitions: 1
+          greet-topic-partitions: 1
+          abuse-topic-partitions: 1
