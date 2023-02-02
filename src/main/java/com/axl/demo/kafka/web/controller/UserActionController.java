@@ -9,7 +9,6 @@ public class UserActionController {
 
     @GetMapping(value = {"/", "/index"})
     public String index(Model model) {
-        model.addAttribute("title", "title");
         return "index";
     }
 }
